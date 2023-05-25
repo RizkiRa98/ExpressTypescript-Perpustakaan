@@ -11,7 +11,6 @@ export const createUser = async (
   const { name, email, password, confPassword, role } = req.body; // request from body atau dari luar
 
   // Validasi format email
-  console.log(password);
   if (email) {
     if (!validator.isEmail(email)) {
       res.status(400).json({ msg: "Format Email Salah" });
